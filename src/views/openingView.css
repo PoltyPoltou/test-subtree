@@ -1,0 +1,63 @@
+.openingDiv {
+    display: flex;
+}
+
+.verticalNavBar>ul {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-navbar-color)
+}
+
+.verticalNavBar a {
+    text-align: center;
+    width: 50px;
+}
+
+.line {
+    stroke: rgb(0, 183, 255);
+    stroke-width: 3;
+    fill: none;
+}
+
+circle.node {
+    r: 25px;
+    stroke: rgb(108, 57, 248);
+    fill: none;
+    cursor: pointer;
+    stroke-width: 3;
+}
+
+circle.blackMove {
+    fill: #b4b4b4
+}
+
+circle.whiteMove {
+    fill: white;
+}
+
+text.nodeText {
+    text-anchor: middle;
+    dominant-baseline: middle;
+    pointer-events: none;
+}
+
+div .svgViewer {
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    margin: 10px;
+    background-color: rgb(14, 43, 70);
+}
+
+div.svgViewer svg>g>rect {
+    fill: rgb(37, 89, 138)
+}
+
+.tooltipView {
+    opacity: 0.95 !important;
+    background: 'black' !important;
+}
+
+.tooltipView .cg-wrap coords {
+    visibility: hidden !important;
+}
