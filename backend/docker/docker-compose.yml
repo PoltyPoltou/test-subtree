@@ -1,0 +1,22 @@
+version: "3.9" # optional since v1.27.0
+services:
+  database:
+    image: postgres
+    environment:
+      - POSTGRES_USER=polty
+      - POSTGRES_PASSWORD=poltou
+      - POSTGRES_DB=chess
+    ports:
+      - "10000:5432"
+    restart: always
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=polty.gun@chess.com
+      - PGADMIN_DEFAULT_PASSWORD=poltypoltou
+    ports:
+      - "10001:80"
+    volumes:
+      - ./pgadmin:/var/lib/pgadmin
+    restart: always
